@@ -98,7 +98,17 @@ GitHub下载地址：[安装包]()
 > 依赖：jdk1.8+     nodejs 9-12    maven 3+
 >
 
-1. **进入项目根目录，初始化库**
+1. 下载源码
+
+   1. 首先需要安装Git LFS ,安装链接  [https://git-lfs.github.com](https://git-lfs.github.com/)
+
+   2. 下载源码 
+
+      ``` shell
+       git lfs clone https://github.com/ZTO-Express/zms.git
+      ```
+
+2. **进入项目根目录，初始化库**
 
    > 设置数据库地址：zms-parent/distribution/pom.xml
 
@@ -127,14 +137,14 @@ GitHub下载地址：[安装包]()
    > ${portal.host:port}：ZMS管理后台启动地址，其他服务通过这个地址与ZMS管理后台进行交互（ZMS后台安装的真实ip、端，或域名映射）。如果 zms.portal.url 配置为空，默认取ZMS管理后台进程服务器的网卡地址
 
    
-   
+
    初始化库命令，进入目录：zms-parent/distribution（只需初始化一次）
-   
+
    ```she
    mvn sql:execute
    ```
-   
-2. **项目根目录打包**
+
+3. **项目根目录打包**
 
    > zms-parent/，生成压缩包: zms-parent/distribution/target/zms-assembly-${project.version}.tar.gz
 
@@ -142,20 +152,20 @@ GitHub下载地址：[安装包]()
    > mvn clean install -DskipTests -P npm-build
    ```
 
-3. **解压压缩包**
+4. **解压压缩包**
 
    ```sh
    > tar -zxvf zms-assembly-${project.version}.tar.gz
    ```
 
-4. **启动服务**
+5. **启动服务**
 
    ```sh
    > cd zms-assembly-${project.version}
    > bin/server.sh start
    ```
 
-5. **当显示下面的日志，说明启动成功**
+6. **当显示下面的日志，说明启动成功**
 
    ``` she
     server.port:8088 
@@ -163,7 +173,7 @@ GitHub下载地址：[安装包]()
     Start success,pid:[12866] 
    ```
 
-6. **访问服务**
+7. **访问服务**
 
    地址：http://locallhost:8088
 
