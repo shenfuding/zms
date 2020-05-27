@@ -38,7 +38,7 @@ ZMS是ZTO Message System的缩写，使用方与集群解耦，屏蔽各消息�
 
 >  依赖：jdk1.8+   	mysql 5.6+
 
-GitHub下载地址：[安装包]()
+GitHub下载地址：[安装包](https://github.com/ZTO-Express/zms/releases/download/1.0.0/zms-assembly-1.0.0.RELEASE.zip)
 
 1. **创建数据库**
 
